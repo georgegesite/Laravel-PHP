@@ -9,8 +9,8 @@ class Todolist extends Model
 {
     use HasFactory;
 
-    protected $fillabe = [
-        'tile',
+    protected $fillable = [
+        'title',
         'content'
     ];
 }
