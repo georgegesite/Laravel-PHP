@@ -15,11 +15,6 @@ class TodolistController extends Controller
         return view('todolist.index', ['todolists' => $todolists]); // pass data to frontend
     }
 
-    public function create()
-    {
-        return view('todolist.create');
-    }
-
     public function store(Request $request)
     {
         $data = $request->validate([

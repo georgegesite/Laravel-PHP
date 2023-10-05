@@ -15,7 +15,6 @@
                 <th>Title</th>
                 <th>Content</th>
             </tr>
-
             @foreach($todolists as $task)
             <tr>
                 <td> {{$task->id}}</td>
@@ -25,5 +24,16 @@
             @endforeach
         </table>
     </div>
+    <div>
+        <form action="{{route('todolist.store')}}" method="post">
+            @csrf
+            <label for="">Title</label>
+            <input type="text" name="title"  id="title" placeholder="Title">
+            <label for="">Content</label>
+            <input type="text" name="content"  id="content" placeholder="Content">
+            <input type="submit" value="Save">
+        </form>
+    </div>
+
 </body>
 </html>
