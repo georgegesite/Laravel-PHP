@@ -20,6 +20,7 @@ class TodolistController extends Controller
         $data = $request->validate([
             'title' => 'required',
             'content' => 'required'
+
         ]);
 
         $newTodo = Todolist::create($data); //save using model -> send to dababase
