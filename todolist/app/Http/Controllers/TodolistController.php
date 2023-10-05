@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todolist;
+use App\Models;
 use Illuminate\Http\Request;
 
 class TodolistController extends Controller
@@ -10,7 +11,8 @@ class TodolistController extends Controller
     //
     public function index()
     {
-        return view('todolist.index');
+        $todolists = Todolist::all();
+        return view('todolist.index', ['todolists' => $todolists]); // pass data to frontend
     }
 
     public function create()
