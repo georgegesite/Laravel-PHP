@@ -23,8 +23,9 @@ class TodolistController extends Controller
 
         ]);
 
-        $newTodo = Todolist::create($data); //save using model -> send to dababase
 
+        $newTodo = Todolist::create($data); //save using model -> send to dababase
+        echo "working";
         return redirect(route('todolist.index'));
     }
 }
