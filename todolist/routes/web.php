@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('/todolist', [TodolistController::class, 'index'])->name('todolist.index');
 Route::post('/todolist', [TodolistController::class, 'store'])->name('todolist.store');
+Route::delete('/todolist/{todolist}/destroy', [TodolistController::class, 'destroy'])->name('todolist.destroy');

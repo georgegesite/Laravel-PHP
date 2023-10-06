@@ -20,6 +20,13 @@
                 <td> {{$task->id}}</td>
                 <td> {{$task->title}}</td>
                 <td> {{$task->content}}</td>
+                <td>
+                    <form method = "post" action="{{route('todolist.destroy', ['todolist' => $task])}}">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="delete">
+                    </form>
+                </td>
             </tr>
             @endforeach
         </table>

@@ -28,4 +28,11 @@ class TodolistController extends Controller
         echo "working";
         return redirect(route('todolist.index'));
     }
+
+    public function destroy(Todolist $todolist)
+    {
+        $todolist->delete();
+
+        return redirect(route('todolist.index'))->with('sucess', "Successfully deleted");
+    }
 }
