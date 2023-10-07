@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// hello world
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
 Route::post('/product', [ProductController::class, 'store'])->name('product.store');
